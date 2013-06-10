@@ -1,4 +1,3 @@
-
  Create a spring 3 java web application that displays the weather.
 
 Weather Ground API kye : ed044d75b91fb500
@@ -12,6 +11,7 @@ Using Command prompt :
 4) Build project using Mvn Command : mvn clean install
 5) Run application on tomcat      : mvn tomcat:run
 6) In browser type : http://localhost:8080/weather-web/
+7) To Run the test cases :   mvn test
 
 -----------------------------------------------------------------------------------
 I have done it using both the approaches XML and JSON.
@@ -30,6 +30,7 @@ weather.condtion.url.json = http://api.wunderground.com/api/{key}/conditions/q/{
 
 Validations :
 1. AppTest contains two methods for testValidZipCode() and testZipCodeNotFound()
+2. To run the test cases : mvn test
 
 Server Side validations using Junit:
 1) Valid Zip Code :
