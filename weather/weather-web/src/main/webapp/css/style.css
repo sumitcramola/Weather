@@ -1,0 +1,14 @@
+.error {
+	color: #ff0000;
+	font-weight: bold;
+}
+
+.clear{clear:both;*clear:both; line-height:0;}
+.floatL{float:left;}
+.floatR{float:right;}
+.clear{clear:both;*clear:both; line-height:0;}
+.width30{ width:30%; float:left;}
+.spacer {
+    height: 5px;
+    line-height: 5px;
+}

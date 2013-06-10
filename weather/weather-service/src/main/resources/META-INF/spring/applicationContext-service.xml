@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<context:property-placeholder location="classpath*:META-INF/spring/*.properties" />
+	<context:component-scan base-package="com.expedia.weather.service"></context:component-scan>
+
+	
+	 <bean id="restTemplate" class="org.springframework.web.client.RestTemplate">
+		<!-- <property name="messageConverters">
+			<list>
+				<bean class="org.springframework.http.converter.xml.MarshallingHttpMessageConverter">
+					<constructor-arg>
+						<ref bean="jaxbMarshaller"></ref>
+					</constructor-arg>
+					<property name="supportedMediaTypes" value="application/xml" />
+				</bean>
+				<bean class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter">
+					<property name="supportedMediaTypes" value="application/json" />
+				</bean>
+			</list>
+		</property> -->
+	</bean>
+	
+	<!-- <bean id="jaxbMarshaller" class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
+		<property name="classesToBeBound">
+			<list>
+				<value>com.expedia.weather.model.WeatherResponse</value>
+				<value>com.expedia.weather.model.Image</value>
+				<value>com.expedia.weather.model.Location</value>
+				<value>com.expedia.weather.model.Observation</value>
+				<value>com.expedia.weather.model.Error</value>			
+				<value>com.expedia.weather.model.type.FeatureType</value>    
+			</list>
+		</property> 
+	</bean>
+	-->
+	
+	
+</beans>
